@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/geral.css">
+    <title> ✨ Quem Somos?</title>
+</head>
+<body>
+    <header class="barraDeNavegacao">
+        <nav>
+            <ul class="navegação">
+                <li><a href="index.html"> COSMOLABS </a></li>
+                <div id="divBusca">
+                    <input type="text" id="txtBusca" placeholder="Buscar..." />
+                </div>
+                <li><a href="artigos.html"> Artigos Científicos </a></li>
+                <li><a href="noticias.html"> Notícias e Discussões </a></li>
+                <li><a href="quem-somos.html"> Quem Somos? </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="esquerda">
+        <h1 class="titulo">QUEM SOMOS?</h1>
+
+        <p class="subtitulo">Na CosmoLabs, unimos paixão pelo cosmos e ciência em um só lugar. Somos um portal dedicado
+            a entusiastas da astronomia, oferecendo uma loja com produtos astronômicos de qualidade, desde telescópios a
+            itens de decoração inspirados nas estrelas. Além disso, somos uma comunidade vibrante com notícias
+            atualizadas sobre ciência e fóruns para discussão e aprendizado. Nossa missão é inspirar e educar,
+            conectando você ao universo de forma acessível e envolvente.
+            <br><br>
+            Explore o universo com a CosmoLabs – onde a ciência encontra a paixão.
+        </p>
+    </div>
+
+    <div class="direita">
+        <form id="mensagemForm">
+            <fieldset>
+                <legend class="tituloCadastro">ENTRE EM CONTATO!</legend>
+                <div class="campos">
+                    <label for="nome" class="campotexto"> Nome Completo </label>
+                    <input class="valor" type="text" id="nome" name="nome" required>
+                    <br><br>
+                    <label for="email" class="campotexto">Email</label>
+                    <input class="valor" type="email" id="email" name="email" required>
+                    <br><br>
+                    <label for="email" class="campotexto">Assunto</label>
+                    <input class="valor" type="text" id="texto" name="texto" required>
+                    <br><br>
+                    <label for="mensagem" class="campotexto">Mensagem</label>
+                    <textarea class="valor" id="mensagem" name="mensagem" rows="4" required></textarea>
+                    <br><br>
+                    <input class="botao" type="submit" value="Enviar">
+                </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CosmoLabs. Todos os direitos reservados.</p>
+    </footer>
+
+        <div class="rodape">
+            <div class="footerpagamento">
+                <h4>Pagamento</h4>
+                <p>À Vista</p>
+                <img src="img/boleto.png" alt="Boleto" class="payment-icon">
+                <p>A Prazo</p>
+                <img src="img/MercadoPago.jpg" alt="PayPal" class="payment-icon">
+                <img src="img/logo-mastercard-4096.png" alt="MasterCard" class="payment-icon">
+            </div>
+    
+            <!-- Seção de contato -->
+            <div class="footercontato">
+                <h4>Contato</h4>
+                <ul>
+                    <li>(11) 2233-3335</li>
+                    <li>cosmolabsa@gmail.com</li>
+                </ul>
+            </div>
+    
+            <!-- Seção de mídias sociais -->
+            <div class="footerredes">
+                <h4>Mídias Sociais</h4>
+                <a href="#"><img src="img/insta.png" alt="Instagram" class="social-icon"></a>
+                <a href="#"><img src="img/facebook.png" alt="Facebook" class="social-icon"></a>
+            </div>
+        </div>
+         
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById('mensagemForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Evita o envio padrão do formulário
+    
+    // Exibe o alerta SweetAlert2
+    Swal.fire({
+        title: 'Mensagem Enviada!',
+        text: 'Entraremos em contato em breve.',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Envia o formulário após o usuário confirmar o alerta
+            document.getElementById('mensagemForm').submit();
+        }
+    });
+});
+    </script>
+
+</body>
+</html>
