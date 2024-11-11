@@ -10,5 +10,5 @@ Este site foi desenvolvido sob orientação e tem como objetivo explorar os conc
 
 O site ainda está bem incompleto e desorganizado. Com o passar do tempo, mudanças e atualizações serão salvas aqui.
 
-Acesse o site:
+Acesse o site: https://escandioneider.github.io/Cosmolabs/
 
