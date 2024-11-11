@@ -1,0 +1,397 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/backgroundGalaxia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    position: relative; /* Necessário para o filtro funcionar corretamente */
+}
+
+/* Camada de sobreposição para aplicar a cor preta semitransparente */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1; /* Coloca a camada atrás do conteúdo */
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Header*/
+header {
+    background-color: #101A2F;
+    padding: 10px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.navegação {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.navegação li {
+    margin: 15px;
+    list-style: none;
+    justify-content: center;
+}
+
+.navegação li a {
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: hsla(0, 0%, 100%, 0.918);
+}
+
+.navegação li a:hover {
+    background-color: #4d618cf6;
+    color: #101A2F;
+}
+
+/* Barra de Pesquisa */
+#divBusca {
+    background-color: #E0EEEE;
+    border: solid 2px #1c2a41a9;
+    width: 250px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+#txtBusca {
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 18px;
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+/*  HOME */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.grid-item {
+    background-color:#4c6183b1;
+    overflow: hidden;
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 180px; /* Defina uma altura fixa */
+    object-fit: cover; /* Mantém o aspecto da imagem */
+}
+
+
+.grid-item.large {
+    grid-column: span 2;
+}
+
+.grid-item .content {
+    padding: 10px; /* Reduzi de 15px para 10px */
+}
+
+.grid-item h2, .grid-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+a {
+    font-size: 22px;
+    color: hsla(0, 0%, 100%, 0.918);
+    text-decoration: none;
+}
+/*  ARTIGOS */
+
+.navegacao-secundaria {
+    position: static;
+    list-style: none;
+    z-index: 1;
+    background-color: #566786; 
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    padding: 5px;
+    margin-top: -10px; 
+}
+
+.navegacao-secundaria li {
+    margin: 0 15px;
+}
+
+.navegacao-secundaria li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Grid para o conteúdo principal */
+.grid-container4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 0.5fr));
+    gap: 15px;
+}
+
+.grid-item4 {
+    background-color:#4c6183b1;
+    overflow: hidden;
+    position: relative;
+}
+
+.grid-item4 img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+}
+
+.grid-item4 .content {
+    padding: 5px; 
+}
+
+/* PÁGINA: QUEM SOMOS NÓS? */
+/* Configuração das letras - Quem Somos Nós */
+.tituloCadastro {
+    font-size: 25px;
+    text-align: center;
+    color: #E0EEEE;
+}
+
+.subtitulo {
+    font-size: 28px;
+    color: #E0EEEE;
+}
+
+/* Ajuste para Texto ficar na Esquerda e Direita*/
+.esquerda {
+    width: 33%;
+    height: 35%;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    margin-left: 180px;
+    margin-top: 45px;
+}
+
+.direita {
+    width: 28%;
+    height: 100vh;
+    float: right;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: right;
+    margin-right: 280px;
+    margin-top: 45px;
+}
+
+/* Estilizações para cadastro */
+fieldset {
+    border: 2px solid #819CD1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 85%;
+}
+
+.campos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.campotexto {
+    font-size: 20px;
+    color: #D9D9D9;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.valor {
+    width: 180%;
+    max-width: 180px;
+    background-color: #FFFFFF;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    color: #101A2F;
+    border: 2px solid #D9D9D9;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    margin-top: 10px;
+   
+}
+
+textarea.valor {
+    width: 230%;
+    max-width: px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Botão de Enviar */
+.botao {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 10px;
+    transition: all 0.5s ease;
+  }
+  
+.botao:hover {
+    letter-spacing: 3px;
+    background-color: #37445fd2;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(208, 208, 235) 0px 7px 29px 0px;
+  }
+  
+.botao:active {
+    letter-spacing: 3px;
+    background-color: #4e375fed;
+    color: hsl(0, 0%, 100%);
+    box-shadow:rgb(208, 208, 235) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+
+  }
+
+ /* Seção de fontes de notícias */
+ .sources {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.sources h2 {
+    font-size: 1.5em;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+   
+}
+
+.social-icons ul li{
+    text-decoration: none;
+}
+.social-icons img {
+    width: 40px;
+    height: 40px;
+} 
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    margin-top: 50px;
+    clear: both;
+}
+
+/* Container principal do rodapé */
+.rodape {
+    display: flex;
+    justify-content: space-between; /* Cria espaço igual entre as seções */
+    align-items: flex-start; /* Alinha as seções no topo */
+    padding: 20px;
+    background-color: rgba(22, 30, 45, 0.65);
+    color: white;
+    /* max-width: 1500px; */
+    margin: 0 auto;
+}
+
+
+/* Seção de pagamento */
+.footerpagamento, .footercontato, .footerredes {
+    flex: 1; /* Cada coluna ocupa o mesmo espaço */
+    text-align: center;
+}
+
+/* Estilos da seção de pagamento */
+.footerpagamento h4, .footercontato h4, .footerredes h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre os ícones */
+    margin-bottom: 10px;
+}
+
+.payment-icon {
+    width: 40px;
+    height: auto;
+}
+
+/* Seção de contato */
+.footercontato ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footercontato li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Seção de mídias sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: auto;
+}
+
