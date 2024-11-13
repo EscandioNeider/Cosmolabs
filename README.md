@@ -10,5 +10,6 @@ Este site foi desenvolvido sob orientação e tem como objetivo explorar os conc
 
 O site ainda está bem incompleto e desorganizado. Com o passar do tempo, mudanças e atualizações serão salvas aqui.
 
+ATUALIZAÇÕES: Implementação do JSON/Script que busca as informações de acordo com as categorias da página "Artigos Científicos" (IMCOMPLETO E SEM SUCESSO NA BUSCA DE IMAGENS.
 Acesse o site: https://escandioneider.github.io/Cosmolabs/
 
