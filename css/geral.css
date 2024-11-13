@@ -1,3 +1,4 @@
+/* -----DECLARAÇÕES GLOBAIS----- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -26,9 +27,9 @@ main {
     margin: 0 auto;
     padding: 20px;
 }
+/* ---------- */
 
-
-/* Header*/
+/* -----CABEÇALHO (TODAS AS PÁGINAS)----- */
 header {
     background-color: #101A2F;
     padding: 10px;
@@ -101,8 +102,9 @@ nav ul {
 nav li {
     margin: 0 15px;
 }
+/* ---------- */
 
-/*  HOME */
+/* -----PÁGINA: HOME (INDEX)----- */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -140,11 +142,71 @@ a {
     color: hsla(0, 0%, 100%, 0.918);
     text-decoration: none;
 }
-/*  ARTIGOS */
+/* ---------- */
+
+/* -----PÁGINA: ARTIGOS-----*/
+/*----- Estilos do Carrossel -----*/
+.custom-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    margin: auto;
+    padding: 2%;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    transition: opacity 0.6s ease;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 10;
+}
+
+.carousel-button-left {
+    left: 10px;
+}
+
+.carousel-button-right {
+    right: 10px;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide {
+    opacity: 0;
+}
 
 .navegacao-secundaria {
     position: static;
-    list-style: none;
+    list-style: none;  /* Remove os marcadores de lista */
     z-index: 1;
     background-color: #566786; 
     display: flex;
@@ -152,10 +214,12 @@ a {
     justify-content: center;
     padding: 5px;
     margin-top: -10px; 
+    padding-left: 0; /* Remove o padding padrão do <ul> */
 }
 
 .navegacao-secundaria li {
     margin: 0 15px;
+    display: inline-block; /* Garante que cada item não seja um bloco */
 }
 
 .navegacao-secundaria li a {
@@ -188,8 +252,7 @@ a {
     padding: 5px; 
 }
 
-/* PÁGINA: QUEM SOMOS NÓS? */
-/* Configuração das letras - Quem Somos Nós */
+/*-----PÁGINA: QUEM SOMOS NÓS?-----*/
 .tituloCadastro {
     font-size: 25px;
     text-align: center;
@@ -299,7 +362,9 @@ textarea.valor {
     transition: 100ms;
 
   }
+/* ---------- */
 
+/* -----FONTES ("PRÉ-RODAPÉ") ----- */
  /* Seção de fontes de notícias */
  .sources {
     text-align: center;
@@ -335,6 +400,7 @@ footer {
     clear: both;
 }
 
+/*-----RODAPÉ-----*/
 /* Container principal do rodapé */
 .rodape {
     display: flex;
