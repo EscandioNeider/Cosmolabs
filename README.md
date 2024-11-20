@@ -5,11 +5,21 @@ Este site foi desenvolvido sob orientação e tem como objetivo explorar os conc
 **PÁGINAS:**
 - COSMOLABS (Index): É a página inicial, onde é possível acessar notícias diversas e alguns produtos.
 - Artigos Científicos: Página do E-commerce.
-- Notícias e Discussões: EM ANDAMENTO.
+- Notícias e Discussões: Página com notícias.
 - Quem Somos?: Cadastro para usuário.
 
 O site ainda está bem incompleto e desorganizado. Com o passar do tempo, mudanças e atualizações serão salvas aqui.
 
-ATUALIZAÇÕES: Implementação do JSON/Script que busca as informações de acordo com as categorias da página "Artigos Científicos" (Corrigido o erro ao buscar as imagens).
+**ATUALIZAÇÕES:**
+-Correção nos Rodapés;
+
+-Artigos Científicos:
+Correção do Carroussel;
+Alterações nos botões "Adicionar ao Carrinho" (Sem implementação do Javascript);
+Exemplificação em "Meu Carrinho";
+
+-Notícias e Discussões:
+Desenvolvimento da página, e implementação das notícias;
+
 Acesse o site: (https://escandioneider.github.io/Cosmolabs/)
 
