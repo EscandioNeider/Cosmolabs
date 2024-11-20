@@ -15,7 +15,9 @@ O site ainda está bem incompleto e desorganizado. Com o passar do tempo, mudan�
 
 -Artigos Científicos:
 Alterações nos botões "Adicionar ao Carrinho";
-Exemplificação em "Meu Carrinho";
+
+**OBS:**
+-Os botões inseridos na sessão "Meu Carrinho" não estão funcionando por enquanto.
 
 Acesse o site: (https://escandioneider.github.io/Cosmolabs/)
 
