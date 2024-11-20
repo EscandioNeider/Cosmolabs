@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/geral.css">
-    <script src="artigos.js"></script>
+    <script src="geral.js"></script>
     <title>Artigos Cientificos</title>
 </head>
 <body>
@@ -17,10 +17,12 @@
                 </div>
                 <li><a href="artigos.html"> Artigos Científicos </a></li>
                 <li><a href="noticias.html"> Notícias e Discussões </a></li>
-                <li><a href="quem-somos.html"> Quem Somos? </a></li>
+                <li><a href="quem-somos.html" > Quem Somos? </a></li>
+                
             </ul>
         </nav>
     </header>
+
     <div class="navegacao-secundaria">
         <ul>
             <li><a href="#" onclick="filtrarProdutos('Telescópios')">Telescópios</a></li>
@@ -28,12 +30,20 @@
             <li><a href="#" onclick="filtrarProdutos('Astrofotografia')">Astrofotografia</a></li>
             <li><a href="#" onclick="filtrarProdutos('Binóculos')">Binóculos</a></li>
             <li><a href="#" onclick="filtrarProdutos('Filtros')">Filtros</a></li>
-            <li><a href="#">Meu Carrinho</a></li>
+            <li><a href="#" id="meuCarrinho">Meu Carrinho</a></li>  
         </ul>
     </div>
+
+    <div class="Listacarrinho" id="teste" style="display: none;">
+        <h3 class="tiCarrinho">Meu Carrinho</h3>
+        <br><br>
+        <p class="subCarrinho">Produto: Telescópio Octans com Brinde</p> <p class="subCarrinho">Preço: R$ 930,00</p>
+        <br><br>
+        <p class="subCarrinho">Total do Carrinho: R$ 930,00</p>
+    </div>
+
     
 <main>
-  
  <!-- Carrossel -->
 <div class="custom-carousel">
     <div class="carousel-track-container">
@@ -60,13 +70,28 @@
             <img src="img/TelescopioOctansBrinde.png" alt="Telescópio Octans com Brinde">
             <div class="content">
                 <h3><a href="https://www.casadoastronomo.com.br/telescopios/telescopios-refratores/telescopio-refrator-70mm-toya-galaxy-ultraoptec-hrt-70l-c-oculares-plossl"target="_blank">Telescópio Refrator 70mm (Brinde incluso)<br>R$ 930,00</a></h3>
+                
+                <button class="botaoCarrinho" onclick="teste()">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                    </svg>
+                    <span>Adicionar ao Meu Carrinho</span>
+                </button>
             </div>
         </div>
-
+        
         <div class="grid-item4" id="2">
             <img src="img/BinoculoSumax.png" alt="Binóculo Sumax">
             <div class="content">
                 <h3><a href="https://www.casadoastronomo.com.br/binoculos/binoculos-c-zoom/binoculo-sumax-12-45x60-bs-ventura-profissional" target="_blank">Binóculo SUMAX 12-45X60 BS Ventura<br>R$ 950,00</a></h3>
+                
+                <button class="botaoCarrinho" onclick="teste()">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                    </svg>
+                    <span>Adicionar ao Meu Carrinho</span>
+                </button>
+                
             </div>
         </div>
 
@@ -74,6 +99,13 @@
             <img src="img/Espectógrafo.png" alt="Instrumento - espectrógrafo portátil">
             <div class="content">
                 <h3><a href="https://pt.aliexpress.com/i/10000034385284.html" target="_blank">Instrumento - espectrógrafo portátil<br>R$ 5.709,19</a></h3>
+               
+                <button class="botaoCarrinho" onclick="teste()">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                    </svg>
+                    <span>Adicionar ao Meu Carrinho</span>
+                </button>
             </div>
         </div>
 
@@ -81,6 +113,13 @@
             <img src="img/FiltroUhc.jpg" alt="Imagem de Filtro">
             <div class="content">
                 <h3><a href="https://www.bazardaastronomia.com/filtros/filtro-uhc-nebulosas-e-reducao-de-poluicao-luminosa#:~:text=O%20filtro%20perfeito%20para%20ver,maior%20qualidade%20das%20imagens%20vistas."  target="_blank">Filtro Uhc - Nebulosas e Redução De Poluição Luminosa <br>R$ 256,00</a></h3>
+              
+                <button class="botaoCarrinho" onclick="teste()">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                    </svg>
+                    <span>Adicionar ao Meu Carrinho</span>
+                </button>
             </div>
         </div>
         
@@ -90,6 +129,13 @@
             <img src="img/PrismaDiagonal.webp" alt="">
             <div class="content">
                 <h3><a href="https://www.bazardaastronomia.com/espelhos-diagonais/prisma-diagonal-adaptador-0-965-x-1-25"  target="_blank">Prisma Diagonal Adaptador 0.965"x 1.25"<br>R$ 180,00</a></h3>
+               
+                <button class="botaoCarrinho" onclick="teste()">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                    </svg>
+                    <span>Adicionar ao Meu Carrinho</span>
+                </button>
             </div>
         </div>
         
@@ -97,6 +143,13 @@
             <img src="img/TelescopioSkyDark.png" alt="Imagem de Astronautas">
             <div class="content">
                 <h3><a href="https://www.bazardaastronomia.com/telescopios/telescopios-novos/telescopio-skydark-70mm-refrator-70500rw"  target="_blank">Telescopio Skydark 70mm Refrator 70500RW <br>R$ 770,00</a></h3>
+               
+                <button class="botaoCarrinho" onclick="teste()">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                    </svg>
+                    <span>Adicionar ao Meu Carrinho</span>
+                </button>
             </div>
         </div>
         
@@ -104,6 +157,13 @@
             <img src="img/FiltroAzulClaro.png" alt="Imagem de Buraco Negro">
             <div class="content">
                 <h3><a href="https://www.bazardaastronomia.com/filtros/filtro-planetario-svbony-sv183-ir-pass-685nm"  target="_blank">Filtro Planetario Svbony SV183 IR Pass 685nm <br> R$ 170,00</a></h3>
+               
+                <button class="botaoCarrinho" onclick="teste()">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                    </svg>
+                    <span>Adicionar ao Meu Carrinho</span>
+                </button>
             </div>
         </div>
         
@@ -111,6 +171,13 @@
             <img src="img/ColminadorLaser.png" alt="Imagem de Estrela Zumbi">
             <div class="content">
                 <h3><a href="https://www.bazardaastronomia.com/colimadores/colimador-a-laser-adaptador-2"  target="_blank">Colimador A Laser + Adaptador 2 <br> R$ 290,00</a></h3>
+               
+                <button class="botaoCarrinho" onclick="teste()">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                    </svg>
+                    <span>Adicionar ao Meu Carrinho</span>
+                </button>
             </div>
         </div>
 
@@ -119,6 +186,13 @@
             <img src="img/BinoculoSvbony.png" alt="">
             <div class="content">
                 <h3><a href="https://www.svbonybrasil.com.br/produto/binoculo-sa204-10x50-porro-ipx6-a-prova-dagua/"  target="_blank">Binóculo SA204 10×50 Porro IPX6 à Prova D’água<br>R$ 622,58</a></h3>
+               
+                <button class="botaoCarrinho" onclick="teste()">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                    </svg>
+                    <span>Adicionar ao Meu Carrinho</span>
+                </button>
             </div>
         </div>
         
@@ -126,69 +200,155 @@
             <img src="img/FiltroUhc.jpg" alt="Imagem de Filtro">
             <div class="content">
                 <h3><a href="https://www.bazardaastronomia.com/filtros/filtro-uhc-nebulosas-e-reducao-de-poluicao-luminosa#:~:text=O%20filtro%20perfeito%20para%20ver,maior%20qualidade%20das%20imagens%20vistas."  target="_blank">Filtro Uhc - Nebulosas e Redução De Poluição Luminosa <br>R$ 256,00</a></h3>
+                
+                <button class="botaoCarrinho" onclick="teste()">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                    </svg>
+                    <span>Adicionar ao Meu Carrinho</span>
+                </button>
             </div>
         </div>
         
         <div class="grid-item4" id="11">
             <img src="img/BuscadoraRedDot.jpg" alt="">
+            <div class="content">
                <h3><a href="https://fotonastro.com.br/produto/buscador-red-dot-metallica-com-ajuste-de-reticulo/?srsltid=AfmBOorVH44qDRfrobzjuCdXs-rLPBUIw9UusZ8HXThe3Li2GFEP_Bju"  target="_blank">Buscadora Red Dot <br> R$ 195,00</a></h3>
+              
+               <button class="botaoCarrinho" onclick="teste()">
+                <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                </svg>
+                <span>Adicionar ao Meu Carrinho</span>
+            </button>
             </div>
         </div>
 
         <div class="grid-item4" id="12">
             <img src="img/BuscadoraTriplo.jpg" alt="Imagem de">
+            <div class="content">
                <h3><a href="https://www.bazardaastronomia.com/adaptadores/suporte-buscadora-triplo"  target="_blank">Suporte Buscadora Triplo <br> R$ 180,00</a></h3>
+              
+               <button class="botaoCarrinho" onclick="teste()">
+                <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                </svg>
+                <span>Adicionar ao Meu Carrinho</span>
+            </button>
             </div>
         </div>
 
         <!-- Parte 4 -->
         <div class="grid-item4" id="13">
             <img src="img/MascaraBaltinov.jpg" alt="Imagem de">
+            <div class="content">
                <h3><a href="https://fotonastro.com.br/produto/mascara-baltinov-de-metal-para-focalizacao/?srsltid=AfmBOoqgn9ux5TSli4ceNFQIV2OadeJaIavnDwaal-oogIGZRDuXmvFc"  target="_blank">Máscara Baltinov de Metal - Focalização <br> R$ 150,00</a></h3>
-                </h3>
+               
+               <button class="botaoCarrinho" onclick="teste()">
+                <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                </svg>
+                <span>Adicionar ao Meu Carrinho</span>
+            </button>
             </div>
         </div>
 
         <div class="grid-item4" id="14">
             <img src="img/SuporteBuscadora.png" alt="Imagem de">
+            <div class="content">
                <h3><a href="https://www.bazardaastronomia.com/buscadoras/kit-suporte-laser-caneta-laser-mod-303-c-chave-seguranca-"  target="_blank">Suporte Para Buscadora Laser <br> R$ 210,00</a></h3>
+               
+               <button class="botaoCarrinho" onclick="teste()">
+                <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                </svg>
+                <span>Adicionar ao Meu Carrinho</span>
+            </button>
             </div>
         </div>
 
         <div class="grid-item4" id="15">
             <img src="img/PocheteOcular.png" alt="Imagem de">
+            <div class="content">
                <h3><a href="https://www.bazardaastronomia.com/lentes-oculares/pochete-oculares"   target="_blank">Pochetes Oculares <br> R$ 250,00</a></h3>
+               
+               <button class="botaoCarrinho" onclick="teste()">
+                <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                </svg>
+                <span>Adicionar ao Meu Carrinho</span>
+            </button>
             </div>
         </div>
 
         <div class="grid-item4" id="16">
             <img src="img/OculosPEclipse.png" alt="Imagem de">
+            <div class="content">
                <h3><a href="https://www.bazardaastronomia.com/filtro-solar/oculos-para-eclipse-solar"  target="_blank">Óculos para Eclipse Solar <br> R$ 15,00</a></h3>
+               
+               <button class="botaoCarrinho" onclick="teste()">
+                <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                </svg>
+                <span>Adicionar ao Meu Carrinho</span>
+            </button>
             </div>
         </div>
 
         <!-- Parte 5 -->
         <div class="grid-item4" id="17">
             <img src="img/TelescopioMaskutov.jpg" alt="Imagem de">
+            <div class="content">
                <h3><a href="https://fotonastro.com.br/produto/meade-etx-90-telescopio-maksutov-goto-90mm-f14/?srsltid=AfmBOop9lWa-3MQVjrZDmYiJaYROxgcmVfznzp6akaU7qHBJVUzXexeA"  target="_blank">Telescópio Maksutov GOTO 90mm f14 <br> R$ 7.000,00</a></h3>
+               
+               <button class="botaoCarrinho" onclick="teste()">
+                <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                </svg>
+                <span>Adicionar ao Meu Carrinho</span>
+            </button>
             </div>
         </div>
 
         <div class="grid-item4" id="18">
             <img src="img/CameraPlanetaria.jpg" alt="Imagem de">
+            <div class="content">
                <h3><a href="https://fotonastro.com.br/produto/zwo-asi662mc-camera-planetaria-1-3-2mp/?srsltid=AfmBOorOKNyzXSIhfL5BhtHFUpzQli1_Zo3Yjwl0uWwkxIMuZVXNyQsY"  target="_blank">Câmera Planetária 1/3″ 2MP <br> R$ 1.699,00</a></h3>
+              
+               <button class="botaoCarrinho" onclick="teste()">
+                <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                </svg>
+                <span>Adicionar ao Meu Carrinho</span>
+            </button>
             </div>
         </div>
 
         <div class="grid-item4" id="19">
             <img src="img/TelescopioFlatField.jpg" alt="Imagem de">
+            <div class="content">
                <h3><a href="https://fotonastro.com.br/produto/askar-80phq-telescopio-apo-flat-field-80mm-f-7-5/?gad_source=1&gclid=Cj0KCQiA57G5BhDUARIsACgCYnx1avG10cVktdBLqBKIq2aYXX3XukC6P19u2RcfAADeBPnL9VPVC60aAgNvEALw_wcB"  target="_blank">Telescópio APO Flat-Field 80mm, f/7.5 <br> R$ 10.999,00</a></h3>
+              
+               <button class="botaoCarrinho" onclick="teste()">
+                <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                </svg>
+                <span>Adicionar ao Meu Carrinho</span>
+            </button>
             </div>
         </div>
 
         <div class="grid-item4" id="20">
               <img src="img/FiltrosColoridos.png" alt="Imagem de">
+              <div class="content">
                <h3><a href="https://www.bazardaastronomia.com/filtros/kit-filtros-coloridos-lua-e-skyglow-filtro-para-telescopio"  target="_blank">Kit Filtros Coloridos <br> R$ 295,00</a></h3>
+               
+               <button class="botaoCarrinho" onclick="teste()">
+                <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
+                </svg>
+                <span>Adicionar ao Meu Carrinho</span>
+            </button>
             </div>
         </div>
     </main>
@@ -197,9 +357,9 @@
 
         <div class="social-icons">
             <ul>
-                <li><a href="https://www.bazardaastronomia.com/"><img src="img/BazarDaAstronomia.png"></a> Olhar Digital</li>
-                <li><a href="https://fotonastro.com.br/"><img src="img/FotonAstro.jpg"></a> CNN Brasil</li>
-                <li><a href="https://www.celestron.com/"><img src="img/CelestronLogo.png"></a> Astrofórum</li>
+                <li><a href="https://www.bazardaastronomia.com/" target="_blank"><img src="img/BazarDaAstronomia.png"></a> Olhar Digital</li>
+                <li><a href="https://fotonastro.com.br/" target="_blank"><img src="img/FotonAstro.jpg"></a> CNN Brasil</li>
+                <li><a href="https://www.celestron.com/" target="_blank"><img src="img/CelestronLogo.png"></a> Astrofórum</li>
             </ul>
         </div>
     </section>
@@ -241,21 +401,30 @@
             const nextButton = document.querySelector('.carousel-button-right');
             const prevButton = document.querySelector('.carousel-button-left');
             let currentIndex = 0;
-            
+    
             function updateSlidePosition() {
                 track.style.transform = 'translateX(-' + currentIndex * 100 + '%)';
             }
-            
+    
             nextButton.addEventListener('click', () => {
                 currentIndex = (currentIndex + 1) % slides.length;
                 updateSlidePosition();
             });
-            
+    
             prevButton.addEventListener('click', () => {
                 currentIndex = (currentIndex - 1 + slides.length) % slides.length;
                 updateSlidePosition();
             });
-            </script>
+    
+            // Script para mostrar/ocultar a lista do carrinho
+            const carrinhoDiv = document.getElementById('teste');
+            const carrinhoLink = document.getElementById('meuCarrinho');
+    
+            carrinhoLink.addEventListener('click', (event) => {
+                event.preventDefault(); // Impede o comportamento padrão do link
+                carrinhoDiv.style.display = (carrinhoDiv.style.display === 'none' || carrinhoDiv.style.display === '') ? 'block' : 'none';
+            });
+        </script>
 
 </body>
 </html>
