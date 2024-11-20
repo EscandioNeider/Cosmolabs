@@ -14,12 +14,8 @@ O site ainda está bem incompleto e desorganizado. Com o passar do tempo, mudan�
 -Correção nos Rodapés;
 
 -Artigos Científicos:
-Correção do Carroussel;
-Alterações nos botões "Adicionar ao Carrinho" (Sem implementação do Javascript);
+Alterações nos botões "Adicionar ao Carrinho";
 Exemplificação em "Meu Carrinho";
-
--Notícias e Discussões:
-Desenvolvimento da página, e implementação das notícias;
 
 Acesse o site: (https://escandioneider.github.io/Cosmolabs/)
 
