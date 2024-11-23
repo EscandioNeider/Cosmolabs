@@ -8,16 +8,7 @@ Este site foi desenvolvido sob orientação e tem como objetivo explorar os conc
 - Notícias e Discussões: Página com notícias.
 - Quem Somos?: Cadastro para usuário.
 
-O site ainda está bem incompleto e desorganizado. Com o passar do tempo, mudanças e atualizações serão salvas aqui.
-
-**ATUALIZAÇÕES:**
--Correção nos Rodapés;
-
--Artigos Científicos:
-Alterações nos botões "Adicionar ao Carrinho";
-
-**OBS:**
--Os botões inseridos na sessão "Meu Carrinho" não estão funcionando por enquanto.
+Com o passar do tempo, mudanças e atualizações serão salvas aqui.
 
 Acesse o site: (https://escandioneider.github.io/Cosmolabs/)
 
