@@ -37,12 +37,11 @@
     <div class="Listacarrinho" id="teste" style="display: none;">
         <h3 class="tiCarrinho">Meu Carrinho</h3>
         <br><br>
-        <ul id="itensCarrinho"></ul> <!-- Crie a lista de itens do carrinho -->
-        <p class="subCarrinho">Total do Carrinho: R$ 0,00</p>
-        <button class="botaoLista" onclick="RealizarCompra">Comprar Todos os Produtos</button>
-        <button class="botaoLista" onclick="EsvaziarCarrinho"> Limpar Carrinho</button>
+        <ul id="itensCarrinho"></ul>
+        <p class="subCarrinho">Total do Carrinho: <span id="total"></span></p>
+        <button class="botaoLista" onclick="RealizarCompra()">Comprar Todos os Produtos</button>
+        <button class="botaoLista" onclick="EsvaziarCarrinho()"> Limpar Carrinho</button>
     </div>
-
     
 <main>
  <!-- Carrossel -->
@@ -569,36 +568,35 @@
             </div>
         </div>
 
-        <script>
-            const track = document.querySelector('.carousel-track');
-            const slides = Array.from(track.children);
-            const nextButton = document.querySelector('.carousel-button-right');
-            const prevButton = document.querySelector('.carousel-button-left');
-            let currentIndex = 0;
-    
-            function updateSlidePosition() {
-                track.style.transform = 'translateX(-' + currentIndex * 100 + '%)';
-            }
-    
-            nextButton.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % slides.length;
-                updateSlidePosition();
-            });
-    
-            prevButton.addEventListener('click', () => {
-                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-                updateSlidePosition();
-            });
-    
-            // Script para mostrar/ocultar a lista do carrinho
-            const carrinhoDiv = document.getElementById('teste');
-            const carrinhoLink = document.getElementById('meuCarrinho');
-    
-            carrinhoLink.addEventListener('click', (event) => {
-                event.preventDefault(); // Impede o comportamento padrão do link
-                carrinhoDiv.style.display = (carrinhoDiv.style.display === 'none' || carrinhoDiv.style.display === '') ? 'block' : 'none';
-            });
-        </script>
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.carousel-button-right');
+        const prevButton = document.querySelector('.carousel-button-left');
+        let currentIndex = 0;
 
+        function updateSlidePosition() {
+            track.style.transform = 'translateX(-' + currentIndex * 100 + '%)';
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlidePosition();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlidePosition();
+        });
+
+        // Script para mostrar/ocultar a lista do carrinho
+        const carrinhoDiv = document.getElementById('teste');
+        const carrinhoLink = document.getElementById('meuCarrinho');
+
+        carrinhoLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Impede o comportamento padrão do link
+            carrinhoDiv.style.display = (carrinhoDiv.style.display === 'none' || carrinhoDiv.style.display === '') ? 'block' : 'none';
+        });
+    </script>
 </body>
 </html>

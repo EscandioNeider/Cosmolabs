@@ -230,8 +230,8 @@ var json =`[
      "imagem": "img/MonóculoBresser.jpg"
     }
 ]`;
-
-//---FUNÇÃO PARA FILTRAR E FAZER GET DOS PRODUTOS POR CATEGORIA---//
+//-------------------------------------------------------------------//
+// ---FUNÇÃO PARA FILTRAR E FAZER GET DOS PRODUTOS POR CATEGORIA--- //
 function filtrarProdutos(categoria) {
     var produtos = JSON.parse(json); // Converte o JSON em um objeto JavaScript
     var produtosFiltrados = produtos.filter(function(produto) {
@@ -261,108 +261,67 @@ function filtrarProdutos(categoria) {
         grid.appendChild(div);
     });
 }
-
-function addCarrinho(produtoId) {
-    // Recupera o carrinho atual do localStorage, ou cria um novo array se estiver vazio
-    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-
-    const produtos = [
-        {id: 1, nome: "Telescópio Refrator 70mm (Brinde incluso)",categoria: "Telescópios",  preco: 930.00, link: "https://www.casadoastronomo.com.br/telescopios/telescopios-refratores/telescopio-refrator-70mm-toya-galaxy-ultraoptec-hrt-70l-c-oculares-plossl", Image: "img/TelescopioOctansBrinde.png"},
-        {id: 2, nome: "Binóculo SUMAX 12-45X60 BS Ventura", categoria: "Binóculos", preco: 950.00, link: "https://www.casadoastronomo.com.br/binoculos/binoculos-c-zoom/binoculo-sumax-12-45x60-bs-ventura-profissional", Image: "img/BinoculoSumax.png"},
-        {id: 3, nome: "Instrumento - espectrógrafo portátil", categoria: "Astrofotografia", preco:  5709.19, link: "https://pt.aliexpress.com/i/10000034385284.html", Image: "img/Espectógrafo.png"},
-        {id: 4, nome: "Filtro UHC - Nebulosas e Redução De Poluição Luminosa", categoria: "Filtros", preco: 256.00, link: "https://www.bazardaastronomia.com/filtros/filtro-uhc-nebulosas-e-reducao-de-poluicao-luminosa#:~:text=O%20filtro%20perfeito%20para%20ver,maior%20qualidade%20das%20imagens%20vistas", Image: "img/FiltroUhc.jpg"},
-        {id: 5, nome: "Prisma Diagonal Adaptador 0.965'x1.25'", categoria: "Telescópios", preco: 180.00, link: "https://www.bazardaastronomia.com/espelhos-diagonais/prisma-diagonal-adaptador-0-965-x-1-25", Image: "img/PrismaDiagonal.webp"},
-        {id: 6, nome: "Telescópio Skydark 70mm Refrator 70500RW", categoria: "Telescópios", preco: 770.00, link: "https://www.bazardaastronomia.com/telescopios/telescopios-novos/telescopio-skydark-70mm-refrator-70500rw", Image: "img/TelescopioSkyDark.png"},
-        {id: 7, nome: "Filtro Planetário Svbony SV183 IR Pass 685nm", categoria: "Filtros", preco: 170.00, link: "https://www.bazardaastronomia.com/filtros/filtro-planetario-svbony-sv183-ir-pass-685nm", Image: "img/FiltroAzulClaro.png"},
-        {id: 8, nome: "Colimador a Laser + Adaptador 2",  categoria: "Astrofotografia", preco: 290.00, link: "https://www.bazardaastronomia.com/colimadores/colimador-a-laser-adaptador-2", Image: "img/ColminadorLaser.png"},
-        {id: 9, nome: "Binóculo SA204 10×50 Porro IPX6 à Prova D’água", categoria: "Binóculos", preco: 622.58, link: "https://www.svbonybrasil.com.br/produto/binoculo-sa204-10x50-porro-ipx6-a-prova-dagua/",  Image: "img/BinoculoSvbony.png" },
-        {id: 10, nome: "Filtro UHC - Nebulosas e Redução De Poluição Luminosa",  categoria: "Filtros", preco: 256.00, link: "https://www.bazardaastronomia.com/filtros/filtro-uhc-nebulosas-e-reducao-de-poluicao-luminosa#:~:text=O%20filtro%20perfeito%20para%20ver,maior%20qualidade%20das%20imagens%20vistas", Image: "img/FiltroUhc.jpg"},
-        {id: 11, nome: "Buscadora Red Dot",  categoria: "Telescópios",  preco: 195.00, link: "https://fotonastro.com.br/produto/buscador-red-dot-metallica-com-ajuste-de-reticulo/?srsltid=AfmBOorVH44qDRfrobzjuCdXs-rLPBUIw9UusZ8HXThe3Li2GFEP_Bju", Image: "img/BuscadoraRedDot.jpg" },
-        {id: 12, nome: "Suporte Buscadora Triplo", categoria: "Telescópios", preco: 180.00, link: "https://www.bazardaastronomia.com/adaptadores/suporte-buscadora-triplo",  Image: "img/BuscadoraTriplo.jpg"},
-        {id: 13, nome: "Máscara Baltinov de Metal - Focalização", categoria: "Astrofotografia",preco: 150.00,  link: "https://fotonastro.com.br/produto/mascara-baltinov-de-metal-para-focalizacao/?srsltid=AfmBOoqgn9ux5TSli4ceNFQIV2OadeJaIavnDwaal-oogIGZRDuXmvFc", Image: "img/MascaraBaltinov.jpg" },
-        {id: 14, nome: "Suporte Para Buscadora Laser", categoria: "Telescópios", preco: 210.00,  link: "https://www.bazardaastronomia.com/buscadoras/kit-suporte-laser-caneta-laser-mod-303-c-chave-seguranca-",  Image:  "img/SuporteBuscadora.png"},
-        {id: 15, nome: "Pochetes Oculares",  categoria: "Lentes", preco: 250.00, link: "https://www.bazardaastronomia.com/lentes-oculares/pochete-oculares",  Image:  "img/PocheteOcular.png"},
-        {id: 16, nome: "Óculos para Eclipse Solar", categoria: "Lentes", preco: 15.00, link: "https://www.bazardaastronomia.com/filtro-solar/oculos-para-eclipse-solar",  Image:  "img/OculosPEclipse.png"},
-        {id: 17, nome: "Câmera Planetária 1/3″ 2MP", categoria: "Telescópios", preco: 1699.00, link: "https://fotonastro.com.br/produto/zwo-asi662mc-camera-planetaria-1-3-2mp/?srsltid=AfmBOorOKNyzXSIhfL5BhtHFUpzQli1_Zo3Yjwl0uWwkxIMuZVXNyQsY",  Image:  "img/TelescopioMaskutov.jpg" },
-        { id: 18, nome: "Câmera Planetária 1/3″ 2MP", categoria: "Astrofotografia", preco: 1699.00, link: "https://fotonastro.com.br/produto/zwo-asi662mc-camera-planetaria-1-3-2mp/?srsltid=AfmBOorOKNyzXSIhfL5BhtHFUpzQli1_Zo3Yjwl0uWwkxIMuZVXNyQsY", Image: "img/CameraPlanetaria.jpg"},
-        { id: 19, nome: "Telescópio APO Flat-Field 80mm, f/7.5", categoria: "Telescópios", preco: 10999.00, link: "https://fotonastro.com.br/produto/askar-80phq-telescopio-apo-flat-field-80mm-f-7-5/?gad_source=1&gclid=Cj0KCQiA57G5BhDUARIsACgCYnx1avG10cVktdBLqBKIq2aYXX3XukC6P19u2RcfAADeBPnL9VPVC60aAgNvEALw_wcB", Image: "img/TelescopioFlatField.jpg"},
-        { id: 20, nome: "Kit Filtros Coloridos", categoria: "Filtros", preco: 295.00, link: "https://www.bazardaastronomia.com/filtros/kit-filtros-coloridos-lua-e-skyglow-filtro-para-telescopio", Image: "img/FiltrosColoridos.png"},
-        { id: 21, nome: "Binóculo Astronomia Angeleyes Thor 20×80", categoria: "Binóculos", preco: 1234.05, link: "https://fotonastro.com.br/produto/binoculo-astronomia-angeleyes-thor-20x80/", Image: "img/BinoculoAngeleyes.jpeg" },
-        { id: 22, nome: "Angeleyes Lente Barlow APO 1.25″ 2x", categoria: "Lente", preco: 590.00, link: "https://fotonastro.com.br/produto/angeleyes-lente-barlow-apo-1-25-2x/?srsltid=AfmBOoqEAfh2bqfF7AGU3qQiF8SJOboLReHibTLm3AzXNBEexdleG9IM", Image: "img/LenteAngeleyes.jpg"},
-        { id: 23, nome: "OCAL V3 Max Colimador Digital", categoria: "Astrofotografia", preco: "R$ 1.614,05", link: "https://fotonastro.com.br/produto/ocal-v3-max-colimador-digital/", imagem: "img/ColimadorDigital.jpg" },
-        { id: 24, nome: "Optolong Filtro conjunto LRGB para Câmera Mono", categoria: "Filtros", preco: "R$ 1.099,00", link: "https://fotonastro.com.br/produto/optolong-filtro-conjunto-lrgb-para-camera-mono/", imagem: "img/FiltrosOptolong.png" },
-        { id: 25, nome: "Adaptador Lente Canon ZWO EFW2-EOS Camera M54", categoria: "Lente", preco: "R$ 287,04", link: "https://fotonastro.com.br/produto/adaptador-lente-canon-zwo-efw2-eos-camera-m54/", imagem: "img/AdaptadorLenteCanon.jpg" },
-        { id: 26, nome: "Prolongador ajustavel para DSLR", categoria: "Binóculos", preco: "R$ 260,00", link: "https://www.bazardaastronomia.com/astrofotografia/prolongador-ajustavel-para-dslr", imagem: "img/ProlongadorBinoculos" },
-        { id: 27, nome: "Sky-Watcher Star Adventure GTi Montagem Equatorial GOTO", categoria: "Astrofotografia", preco: "R$ 6.699,00", link: "https://fotonastro.com.br/produto/sky-watcher-star-adventure-gti-montagem-equatorial-goto/", imagem: "img/AstrofotogGoto.jpg" },
-        { id: 28, nome: "Focalizador 2″ CYCK para Newt/SCT", categoria: "Astrofotografia", preco: "R$ 1.399,00", link: "https://fotonastro.com.br/produto/focalizador-2-cyck-para-newt-sct/", imagem: "img/FocalizadorAstrofotos.jpg" },
-        { id: 29, nome: "Mapa de Lua 260 por Meade", categoria: "Binóculos", preco: "R$ 89,00", link: "https://fotonastro.com.br/produto/mapa-de-lua-260-por-meade/", imagem: "img/MapaDaLua.jpg" },
-        { id: 30, nome: "Angeleyes Conjunto Ocular Plosso+Barlow+Filtro+Caixa", categoria: "Filtros", preco: "R$ 949,00", link: "https://fotonastro.com.br/produto/angeleyes-conjunto-ocular-plossobarlowfiltrocaixa/", imagem: "img/ConjuntoBarlowAngel.jpg" },
-        { id: 31, nome: "GSO Lente Barlow ED 1.25″ 3x", categoria: "Lentes", preco: "R$ 199,00", link: "https://fotonastro.com.br/produto/gso-lente-barlow-ed-1-25-3x/", imagem: "img/LenteBarlow.jpg" },
-        { id: 32, nome: "BRESSER Wave 12×50 Monóculo à Prova D’Água", categoria: "Lentes", preco: "R$ 680,00", link: "https://fotonastro.com.br/produto/bresser-wave-12x50-monoculo-a-prova-dagua/", imagem: "img/MonóculoBresser.jpg" }
-    ];
-
-    // Encontra o produto selecionado pelos IDs disponíveis
-    const produtoSelecionado = produtos.find(produto => produto.id === produtoId);
-
-    if (!produtoSelecionado) {
-        alert("Produto não encontrado!");
-        return;
-    }
-
-    // Verifica se o produto já está no carrinho
-    const produtoExistente = carrinho.find(produto => produto.id === produtoId);
-    
-    if (produtoExistente) {
-        produtoExistente.quantidade += 1;
-    } else {
-        carrinho.push({
-            id: produtoSelecionado.id,
-            nome: produtoSelecionado.nome,
-            preco: produtoSelecionado.preco,
-            quantidade: 1
-        });
-    }
-
-    // Salva o carrinho atualizado no localStorage
-    localStorage.setItem("carrinho", JSON.stringify(carrinho));
-
-    alert("Produto adicionado ao carrinho!");
-}
-
 //------------------------------------------------------------------//
-    // Função para adicionar produtos ao carrinho
-    function teste(imagem, id, nome, preco) {
-        // Obtém a lista do carrinho
-          const itensCarrinho = document.getElementById('itensCarrinho');
-   
-           // Cria um novo item de lista
-           const itemCarrinho = document.createElement('li');
-           itemCarrinho.innerHTML = `
-               <img src="${imagem}" alt="${nome}" style="width: 50px; height: 50px;">
-               <span>${nome} - ${preco}</span>
-           `;
-           //Adiciona o item à lista do carrinho
-           itensCarrinho.appendChild(itemCarrinho);
-       }
- //-------------------------------------------------------------------//
+// 
+var totalCarrinho = 0
+function somaPrecoCarrinho(preco) {
+    // Converte o preço para número, removendo "R$" e ajustando formato
+    var valor = parseFloat(preco.replace('R$', '').replace(/\./g, '').replace(',', '.'));
 
-    //COLOCAR PRODUTO NO CARRINHO
-    function colocarNoCarrinho(id){
-        var produtos = JSON.parse(json); // Converte o JSON em um objeto JavaScript
-        var ul = document.getElementById("itensCarrinho")
+    // Adiciona ao total somente se a conversão for válida
+    if (valor) {
+        totalCarrinho += valor;
 
-        // Verifica se o item já está no carrinho
-        if(document.getElementById(`item${id}`) != null){
-            alert("Este produto já está no carrinho")
+        // Atualiza o total no carrinho
+        document.getElementById('total').textContent = totalCarrinho.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+        });
+
+    }
+}
+//------------------------------------------------------------------//
+// ---COLOCAR PRODUTO NO CARRINHO--- //
+   function colocarNoCarrinho(id){
+    var produtos = JSON.parse(json); // Converte o JSON em um objeto JavaScript
+    var ul = document.getElementById("itensCarrinho")
+
+    // Verifica se o item já está no carrinho
+    if(document.getElementById(`item${id}`) != null){
+        alert("Este produto já está no carrinho")
+        return
+    }
+    // Itera por cada produto do json, e coloca no carrinho se não estiver
+    produtos.forEach(p =>{
+        if(p.id == id){
+            ul.innerHTML += `<li id="item${id}" background-color:#212632;><img src='${p.imagem}' width='75' style='float:left;'><p>Produto: <span>${p.nome}</span> <br> Preço: <span>${p.preco}</span></p></li><br><br>`
+            somaPrecoCarrinho(p.preco)
             return
         }
-        // Itera por cada produto do json, e coloca no carrinho se não estiver
-        produtos.forEach(p =>{
-            if(p.id == id){
-                ul.innerHTML += `<li id="item${id}" background-color:#212632;><img src='${p.imagem}' width='75' style='float:left;'><p>Produto: <span>${p.nome}</span> <br> Preço: <span>${p.preco}</span></p></li><br><br>`
-                return
-            }
-        })
+    })
+}
+ //-------------------------------------------------------------------//
+// ---LIMPA O CARRINHO--- //
+    function EsvaziarCarrinho() {
+        const itensCarrinho = document.getElementById("itensCarrinho");
+        itensCarrinho.innerHTML = ""; // Remove os itens da lista do HTML
     }
+//-------------------------------------------------------------------//
+// ---COMPRAR TODOS OS PRODUTOS DO CARRINHO--- //
+    function RealizarCompra() {
+        const itensCarrinho = document.getElementById("itensCarrinho");
+
+
+        if (itensCarrinho.children.length === 0) {
+            alert("Seu carrinho está vazio!");
+            return;
+        } else {
+            alert(`Compra realizada com sucesso!`);
+        }
+    
+        // Limpa o carrinho após a compra
+        EsvaziarCarrinho();
+    }
+    
 
 
