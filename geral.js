@@ -250,7 +250,7 @@ function filtrarProdutos(categoria) {
             <img src="${produto.imagem}" alt="${produto.nome}">
             <div class="content">
                 <h3><a href="${produto.link}">${produto.nome} <br>${produto.preco}</a></h3>
-               <button class="botaoCarrinho" onclick="teste()">
+                <button class="botaoCarrinho" onclick="colocarNoCarrinho('${produto.id}')">
                     <svg viewBox="0 0 16 16" class="bi bi-cart2" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" stroke="currentColor" stroke-width="1.0"></path>
                     </svg>
@@ -262,7 +262,7 @@ function filtrarProdutos(categoria) {
     });
 }
 //------------------------------------------------------------------//
-// 
+// ---FAZER SOMA DO VALOR TOTAL DO CARRINHO---
 var totalCarrinho = 0
 function somaPrecoCarrinho(preco) {
     // Converte o preço para número, removendo "R$" e ajustando formato
@@ -304,7 +304,9 @@ function somaPrecoCarrinho(preco) {
 // ---LIMPA O CARRINHO--- //
     function EsvaziarCarrinho() {
         const itensCarrinho = document.getElementById("itensCarrinho");
-        itensCarrinho.innerHTML = ""; // Remove os itens da lista do HTML
+        const somaPrecoCarrinho = document.getElementById("total")
+        itensCarrinho.innerHTML = ""; 
+        somaPrecoCarrinho.innerHTML = "";
     }
 //-------------------------------------------------------------------//
 // ---COMPRAR TODOS OS PRODUTOS DO CARRINHO--- //

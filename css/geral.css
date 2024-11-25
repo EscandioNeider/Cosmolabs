@@ -19,7 +19,7 @@ body::after {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5); 
-    z-index: -1; /* Coloca a camada atrás do conteúdo */
+    z-index: -1; 
 }
 
 main {
@@ -27,7 +27,7 @@ main {
     margin: 0 auto;
     padding: 20px;
 }
-/* ---------- */
+/* --------------------------------------- */
 
 /* -----CABEÇALHO (TODAS AS PÁGINAS)----- */
 header {
@@ -102,7 +102,7 @@ nav ul {
 nav li {
     margin: 0 15px;
 }
-/* ---------- */
+/* --------------------------------------- */
 
 /* -----PÁGINA: HOME (INDEX)----- */
 .grid-container {
@@ -120,16 +120,15 @@ nav li {
 .grid-item img {
     width: 100%;
     height: 180px; 
-    object-fit: cover; /* Mantém o aspecto da imagem */
+    object-fit: cover; 
 }
-
 
 .grid-item.large {
     grid-column: span 2;
 }
 
 .grid-item .content {
-    padding: 10px; /* Reduzi de 15px para 10px */
+    padding: 10px;
 }
 
 .grid-item h2, .grid-item h3 {
@@ -148,10 +147,11 @@ a {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
     transition: all 0.3s ease-in-out; 
 }
-/* ---------- */
 
+/* --------------------------------------- */
 /* -----PÁGINA: ARTIGOS-----*/
-/*-----caixa oculta----- */
+
+/*-----Caixa oculta----- */
 .Listacarrinho {
     position: absolute;
     top: 120px; 
@@ -202,7 +202,6 @@ a {
 .botaoLista:hover {
     background-color: #3c4f68;
 }
-
 
 /*----- Estilos do Carrossel -----*/
 .custom-carousel {
@@ -321,7 +320,6 @@ a {
 }
 
 /*  Botão para adicionar o item ao carrinho */
-/* Estilo geral para o container */
 .botaoCarrinho {
     position: relative;
     background: linear-gradient(320deg, #7083a3, #566786);
@@ -452,11 +450,11 @@ fieldset {
 .valor {
     width: 180%;
     max-width: 180px;
-    background-color: #FFFFFF;
+    background-color:  #a8b6cd50;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 15px;
-    color: #101A2F;
-    border: 2px solid #D9D9D9;
+    color: #ffffff;
+    border: 2px solid #7083a3;
     border-radius: 10px;
     padding: 5px;
     text-align: center;
@@ -466,8 +464,15 @@ fieldset {
 
 textarea.valor {
     width: 230%;
-    max-width: px;
-    background-color: rgb(255, 255, 255);
+    background-color: #a8b6cd50;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    color: #ffffff;
+    border: 2px solid #7083a3;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* Botão de Enviar */
@@ -476,7 +481,7 @@ textarea.valor {
     border-radius: 50px;
     cursor: pointer;
     border: 0;
-    background-color: white;
+    background-color:#d5dff1dc;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -486,14 +491,14 @@ textarea.valor {
   
 .botao:hover {
     letter-spacing: 3px;
-    background-color: #37445fd2;
-    color: hsl(0, 0%, 100%);
+    background-color: #7083a3;
+    color: #2b3a4f;
     box-shadow: rgb(208, 208, 235) 0px 7px 29px 0px;
   }
   
 .botao:active {
     letter-spacing: 3px;
-    background-color: #4e375fed;
+    background-color:#212632;
     color: hsl(0, 0%, 100%);
     box-shadow:rgb(208, 208, 235) 0px 0px 0px 0px;
     transform: translateY(10px);
@@ -501,8 +506,8 @@ textarea.valor {
 
   }
 /* ---------- */
-
 /* -----FONTES ("PRÉ-RODAPÉ") ----- */
+
  /* Seção de fontes de notícias */
  .sources {
     text-align: center;
