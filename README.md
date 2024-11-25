@@ -12,7 +12,9 @@ Com o passar do tempo, mudanças e atualizações serão salvas aqui.
 
 **ATUALIZAÇÕES**
 -> Implementação para colocar produto no carrinho nas subdivisões da loja; 
+
 -> Agora, o total de preços é limpo após a compra;
+
 -> Mudança nas cores do cadastro; 
 
 Acesse o site: (https://escandioneider.github.io/Cosmolabs/)
