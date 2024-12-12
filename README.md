@@ -8,7 +8,7 @@ Este site foi desenvolvido sob orientação e tem como objetivo explorar os conc
 - Notícias e Discussões: Página com notícias.
 - Quem Somos?: Cadastro para usuário.
 
-Com o passar do tempo, mudanças e atualizações serão salvas aqui.
+>Com o passar do tempo, mudanças e atualizações serão salvas aqui.
 
 ## **ATUALIZAÇÕES**
 -> Implementação para colocar produto no carrinho nas subdivisões da loja; 
@@ -17,5 +17,5 @@ Com o passar do tempo, mudanças e atualizações serão salvas aqui.
 
 -> Mudança nas cores do cadastro; 
 
-Acesse o site: (https://escandioneider.github.io/Cosmolabs/)
+🔗 Acesse o site: (https://escandioneider.github.io/Cosmolabs/)
 
